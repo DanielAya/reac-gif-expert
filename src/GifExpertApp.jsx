@@ -12,7 +12,7 @@ export const GifExpertApp = () => {
         /** validamos si el elemento que se quiere agregar en categories ya existe, para no agregarlo nuevamente*/
         if(categories.includes(categoryString)) return;
         /** Los tres puntos seguidos son el operador spread, que me permite mantener el arreglo del useState*/
-        setcategories(old => [...old, categoryString])
+        setcategories(old => [categoryString, ...old])
         console.log(categoryString);
     }
 
